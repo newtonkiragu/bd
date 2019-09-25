@@ -19,7 +19,24 @@ h1 {
   text-shadow: 0 0 20px black;
   opacity: .8;
 }
-
+@media only screen and (max-device-width: 641px){
+  h1 {
+    position: fixed;
+    margin: 0 auto;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    width: 12em;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 100;
+    font-family: 'Sacramento';
+    letter-spacing: .1em;
+    color: white;
+    text-shadow: 0 0 20px black;
+    opacity: .8;
+  }
+}
 #glow {
   position: absolute;
   left: calc(50% - .1em);
@@ -38,6 +55,7 @@ h1 {
   height: 10em;
   overflow: hidden;
 }
+
 #candle::before {
   position: absolute;
   bottom: 0;
@@ -238,6 +256,8 @@ h1 {
 }
 
 #username{
-  position: sticky;
+  position: fixed;
   top: 0;
+  z-index: -1;
+  padding-top: 20px;
 }

@@ -1,7 +1,7 @@
 $(function () {
 
     var flame = $('#flame');
-    var txt = $('h1');
+    var txt = $('#wish');
 
     flame.on({
         click: function () {
