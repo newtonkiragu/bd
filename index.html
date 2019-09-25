@@ -16,8 +16,10 @@
 
 <body>
     <h1>
-
         Make a wish..<br />.. and blow out the candle
+    </h1>
+    <h1 id="username">
+
     </h1>
     <div id="glow" class="glow"></div>
     <div id="candle">
@@ -34,6 +36,21 @@
             <div id="flame" class="burn"></div>
         </div>
     </div>
+<script>
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    var name = getParameterByName('name');
+
+    document.getElementById('username').innerHTML = "Happy Birthday " + name;
+</script>
 </body>
 
 </html>

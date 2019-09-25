@@ -11,7 +11,7 @@ h1 {
   right: 0;
   width: 12em;
   text-align: center;
-  font-size: 2em;
+  font-size: 4em;
   font-weight: 100;
   font-family: 'Sacramento';
   letter-spacing: .1em;
@@ -235,4 +235,9 @@ h1 {
 .stripe:nth-child(5) {
   top: 8.7em;
   opacity: 0.6;
+}
+
+#username{
+  position: sticky;
+  top: 0;
 }
