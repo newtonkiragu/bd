@@ -11,16 +11,16 @@
         crossorigin="anonymous"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/birthday.css" />
 </head>
 
 <body>
+    <canvas id="myCanvas" style="display: none;"></canvas>
     <h1 id="wish">
         Make a wish..<br />.. and blow out the candle <br> (tap the flame)
     </h1>
-    <h1 id="username">
+    <h1 id="username"></h1>
 
-    </h1>
     <div id="glow" class="glow"></div>
     <div id="candle">
         <div class="stripe"></div>
@@ -36,21 +36,24 @@
             <div id="flame" class="burn"></div>
         </div>
     </div>
-<script>
-    function getParameterByName(name, url) {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, '\\$&');
-        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, ' '));
-    }
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
 
-    var name = getParameterByName('name');
+        var name = getParameterByName('name');
 
-    document.getElementById('username').innerHTML = "Happy Birthday " + name;
-</script>
+        document.getElementById('username').innerHTML = "Happy Birthday " + name;
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/birthday.js"></script>
+
 </body>
 
 </html>
