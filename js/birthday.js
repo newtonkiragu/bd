@@ -1,4 +1,4 @@
-var c = document.getElementById("myCanvas")
+var c = document.getElementById("myCanvas");
 var w = c.width = window.innerWidth,
     h = c.height = window.innerHeight,
     ctx = c.getContext( '2d' ),
@@ -86,7 +86,7 @@ Letter.prototype.reset = function(){
     this.reachTime = opts.fireworkBaseReachTime + opts.fireworkAddedReachTime * Math.random() |0;
     this.lineWidth = opts.fireworkBaseLineWidth + opts.fireworkAddedLineWidth * Math.random();
     this.prevPoints = [ [ 0, hh, 0 ] ];
-}
+};
 Letter.prototype.step = function(){
 
     if( this.phase === 'firework' ){
@@ -299,7 +299,7 @@ Letter.prototype.step = function(){
 
         }
     }
-}
+};
 function Shard( x, y, vx, vy, color ){
 
     var vel = opts.fireworkShardBaseVel + opts.fireworkShardAddedVel * Math.random();
@@ -345,7 +345,7 @@ Shard.prototype.step = function(){
 
     if( this.prevPoints[ 0 ][ 1 ] > hh )
         this.alive = false;
-}
+};
 function generateBalloonPath( x, y, size ){
 
     ctx.moveTo( x, y );
@@ -400,4 +400,4 @@ window.addEventListener( 'resize', function(){
     hh = h / 2;
 
     ctx.font = opts.charSize + 'px Verdana';
-})
+});
