@@ -18,7 +18,7 @@ $(function () {
             $('#candle').animate({
                 'opacity': '.5'
             }, 100);
-            document.getElementById("myCanvas").style.display = "block";
+            document.getElementById("can").style.display = "block";
             document.getElementById('candle').style.display = "none";
             txt2.fadeIn(3500);
             // myCanvas.fadeIn(3500);
