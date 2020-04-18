@@ -14,11 +14,12 @@ $(function () {
                 $(this).addClass('puff-bubble');
             });
             $('#glow').remove();
-            txt.show().html("It <b>will</b> come true...").fadeOut(2000);
+            txt.show().html("It <b>will</b> come true...").fadeOut(5000);
             $('#candle').animate({
                 'opacity': '.5'
             }, 100);
-            document.getElementById("can").style.display = "block";
+            // document.getElementById("can").style.display = "block";
+            document.getElementById("myCanvas").style.display = "block";
             document.getElementById('candle').style.display = "none";
             txt2.fadeIn(3500);
             // myCanvas.fadeIn(3500);
