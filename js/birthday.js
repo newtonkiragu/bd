@@ -56,7 +56,18 @@ var w = c.width = window.innerWidth,
 
     letters = [];
 
+// newFunction();
 ctx.font = opts.charSize + 'px Verdana';
+
+// function newFunction() {
+//     var background = new Image();
+//     background.src = "../img/ahmed.jpeg";
+
+//     // Make sure the image is loaded first otherwise nothing will draw.
+//     background.onload = function () {
+//         ctx.drawImage(background, 0, 0);
+//     };
+// }
 
 function Letter( char, x, y ){
     this.char = char;
