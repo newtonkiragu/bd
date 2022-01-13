@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Happy Birthday</title>
+</head>
+<body>
+	<canvas id="world"></canvas>
+    <div class="card">
+		<div class="imgBox">
+			<div class="bark"></div>
+			<img src="./assets/img/lastofus.jpg">
+		</div>
+		<div class="details">
+			<h4 class="color1">You're not a Fossil! (YET)</h2>
+			<h4 id="username" class="color2 margin"></h4>
+			<p id="docname"></p>
+			<p>Let's see...</p>
+			<p>You’re a great friend, you</p>
+			<p>are an even greater father, you</p>
+			<p>practically made me blackout on</p>
+			<p>more than one occasion, yet you</p>
+			<p>manage to remain down to earth.</p>
+			<p>How do you do that? :)</p>
+			<p class="text-right">Happy Birthday,</p>
+			<p class="text-right">♥Newton and Family</p>
+		</div>
+	</div>
+
+	<script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        var name = getParameterByName('name');
+
+        document.getElementById('username').innerHTML = "HAPPY BIRTHDAY " + name;
+        document.getElementById('docname').innerHTML = "Dear " + name + ",";
+    </script>
+	<script src="./assets/js/scripts.js"></script>
+</body>
+</html>
